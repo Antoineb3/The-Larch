@@ -1,0 +1,116 @@
+/* General */
+body {
+    font: 24px Helvetica;
+    background-image: url('img/background.jpg');
+    background-size: 100%;
+}
+
+main {
+    margin: 0px;
+    padding: 0px;
+    min-height: 400px;
+    display: flex;
+    flex-flow: row;
+}
+
+a {
+    color: inherit;
+    font: inherit;
+    text-decoration: inherit;
+}
+
+
+/* Article */
+main>article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+    background: lightgrey;
+    flex: 3 1 80%;
+    order: 2;
+}
+
+/* Navigation */
+main>nav {
+    margin: 4px;
+    padding: 6px 0px;
+    border: 1px solid #8888bb;
+    border-radius: 7px;
+    background: #E9A000;
+    position: relative;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+main>nav>h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main>nav>ul {
+    list-style-image: url('img/larch_icon_2.svg');
+}
+
+main>nav>ul>li {
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main>nav>ul>li>a {
+    color: #bdb8d7;
+    display: block;
+}
+
+main>nav>ul>li:hover {
+    background-color: #594f8d;
+}
+
+main>nav>ul>li:hover a {
+    color: #fff;
+}
+
+/* Header & Footer */
+header,
+footer {
+    margin: 4px;
+    padding: 5px 0px;
+    min-height: 50px;
+    border: 1px solid grey;
+    border-radius: 7pt;
+    background: #395701;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+}
+
+h1 {
+    margin: 0px;
+    width: 700px;
+    text-transform: uppercase;
+    order: 2;
+}
+
+.forest_left {
+    width: 100%;
+    background-image: url("img/larch_icon_3.svg");
+    background-size: 50px;
+    background-position-x: right;
+    background-repeat: repeat-x;
+    order: 1;
+
+}
+
+.forest_right {
+    width: 100%;
+    background-image: url("img/larch_icon_3.svg");
+    background-size: inherit;
+    background-size: 50px;
+    background-position-x: left;
+    background-repeat: repeat-x;
+    order: 3;
+}
