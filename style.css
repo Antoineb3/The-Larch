@@ -26,7 +26,8 @@ main>article {
     padding: 5px;
     border: 1px solid #cccc33;
     border-radius: 7pt;
-    background: lightgrey;
+    background: #4F7012;
+    color: white;
     flex: 3 1 80%;
     order: 2;
 }
@@ -35,42 +36,52 @@ main>article {
 main>nav {
     margin: 4px;
     padding: 6px 0px;
-    border: 1px solid #8888bb;
+    border: 1px solid darkgray;
     border-radius: 7px;
     background: #E9A000;
+    color: white;
     position: relative;
     flex: 1 6 20%;
     order: 1;
 }
 
 main>nav>h2 {
-    color: #fff;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
 }
 
 main>nav>ul {
-    list-style-image: url('img/larch_icon_2.svg');
+    list-style-type: none;
+    padding-inline-start: 0px;
 }
 
-main>nav>ul>li {
+.navigation_item {
     padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-flow: row;
 }
 
-main>nav>ul>li>a {
-    color: #bdb8d7;
-    display: block;
+.navigation_item>a {
+    margin: -15px;
+    padding: 15px;
+    margin-left: -45px;
+    padding-left: 45px;
+    width: 100%;
 }
 
-main>nav>ul>li:hover {
-    background-color: #594f8d;
+.navigation_item>img {
+    width: 25px;
+    margin-right: 5px;
 }
 
-main>nav>ul>li:hover a {
+.navigation_item:hover {
+    background-color: #FA442A;
+}
+
+.navigation_item:hover a {
     color: #fff;
 }
 
@@ -88,15 +99,22 @@ footer {
     flex-flow: row;
 }
 
-h1 {
+header>h1 {
     margin: 0px;
     width: 700px;
     text-transform: uppercase;
     order: 2;
 }
 
+footer>h4 {
+    margin: 12px 0px;
+    width: 300px;
+    order: 2;
+}
+
 .forest_left {
     width: 100%;
+    height: 50px;
     background-image: url("img/larch_icon_3.svg");
     background-size: 50px;
     background-position-x: right;
@@ -107,6 +125,7 @@ h1 {
 
 .forest_right {
     width: 100%;
+    height: 50px;
     background-image: url("img/larch_icon_3.svg");
     background-size: inherit;
     background-size: 50px;
