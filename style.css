@@ -1,6 +1,6 @@
 /* General */
 body {
-    font: 24px Helvetica;
+    font-family: 'Roboto', sans-serif;
     background-image: url('img/background.jpg');
     background-attachment: fixed;
     background-size: 100%;
@@ -25,12 +25,27 @@ a {
 article {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #cccc33;
+    border: 1px solid darkgray;
     border-radius: 7pt;
     background: #4F7012;
     color: white;
     flex: 3 1 80%;
     order: 2;
+}
+
+article>p,
+article>ul,
+article>table {
+    font-size: 1.2em;
+}
+
+article>h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+article>h3 {
+    font-size: 1.8em;
 }
 
 article>p>img {
@@ -39,14 +54,39 @@ article>p>img {
     margin: .5em;
 }
 
-article>h2 {
-    text-align: center;
-}
-
 article td>img {
     max-width: 300px;
     max-height: 300px;
 }
+
+#species {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    background: darkgrey;
+}
+
+#species .picture_col {
+    width: 300px;
+}
+
+#species tr:nth-child(even) {
+    background-color: #FA442A;
+}
+
+#species tr:nth-child(odd) {
+    background-color: #E3280E;
+}
+
+#species th {
+    background-color: black;
+}
+
+.video {
+    text-align: center;
+    width: 100%;
+}
+
 
 /* Navigation */
 nav {
@@ -64,10 +104,16 @@ nav {
 nav>h2 {
     text-transform: uppercase;
     text-align: center;
+    font-size: 2.5em;
     margin-bottom: 30px;
 }
 
 nav>ul {
+    position: sticky;
+    /* Safari */
+    position: -webkit-sticky;
+    top: 0;
+    font-size: 1.5em;
     list-style-type: none;
     padding-inline-start: 0px;
 }
@@ -89,7 +135,7 @@ nav>ul {
 }
 
 .navigation_item>img {
-    width: 25px;
+    width: 1.3em;
     margin-right: 5px;
 }
 
@@ -101,13 +147,14 @@ nav>ul {
     color: black;
 }
 
+
 /* Header & Footer */
 header,
 footer {
     margin: 4px;
     padding: 5px 0px;
     min-height: 50px;
-    border: 1px solid grey;
+    border: 1px solid darkgray;
     border-radius: 7pt;
     background: #395701;
     text-align: center;
@@ -118,6 +165,7 @@ footer {
 header>h1 {
     margin: 0px;
     width: 700px;
+    font-size: 3.2em;
     text-transform: uppercase;
     order: 2;
 }
@@ -125,6 +173,7 @@ header>h1 {
 footer>h4 {
     margin: 12px 0px;
     width: 300px;
+    font-size: 1.5em;
     order: 2;
 }
 
